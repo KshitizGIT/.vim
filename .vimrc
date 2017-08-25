@@ -1,5 +1,5 @@
 set nocompatible
-filetype off
+filetype on
 
 " set the runtime path to include Vundle and initialize
  set rtp+=~/.vim/bundle/Vundle.vim
@@ -17,6 +17,8 @@ filetype off
  Plugin 'mattn/emmet-vim'
  " added solarized
  Plugin 'altercation/vim-colors-solarized'
+ " added YouComplete me
+ Plugin 'Valloric/YouCompleteMe'
 
  Bundle 'indenthtml.vim'
  
@@ -27,6 +29,10 @@ nmap <F6> :NERDTreeToggle<CR>
 :let g:html_indent_script1 = "inc"
 :let g:html_indent_style1 = "inc"
 :let g:html_indent_inctags = "html,body,head,tbody"
+
+
+"emmet trigger
+let g:user_emmet_leader_key='<C-Z>'
 
 "solarized options
 syntax enable
