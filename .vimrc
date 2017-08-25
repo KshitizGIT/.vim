@@ -15,6 +15,9 @@ filetype off
 
  " added emmet-vim
  Plugin 'mattn/emmet-vim'
+ " added solarized
+ Plugin 'altercation/vim-colors-solarized'
+
  Bundle 'indenthtml.vim'
  
 call vundle#end()  		" required
@@ -24,3 +27,8 @@ nmap <F6> :NERDTreeToggle<CR>
 :let g:html_indent_script1 = "inc"
 :let g:html_indent_style1 = "inc"
 :let g:html_indent_inctags = "html,body,head,tbody"
+
+"solarized options
+syntax enable
+set background=dark
+colorscheme solarized
