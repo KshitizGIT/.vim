@@ -20,7 +20,6 @@ filetype on
  " added YouComplete me
  Plugin 'Valloric/YouCompleteMe'
 
- Bundle 'indenthtml.vim'
  
 call vundle#end()  		" required
 filetype plugin indent on      	" required 
