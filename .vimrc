@@ -1,5 +1,9 @@
 set nocompatible
+
 filetype on
+
+set relativenumber
+set number
 
 " set the runtime path to include Vundle and initialize
  set rtp+=~/.vim/bundle/Vundle.vim
