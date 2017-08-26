@@ -35,6 +35,10 @@ set number
  " added vim-airline-themes
  Plugin 'vim-airline/vim-airline-themes'
 
+ "added vim-surround
+ 
+ Plugin 'tpope/vim-surround'
+
 call vundle#end()  		" required
 filetype plugin indent on      	" required 
 nmap <F6> :NERDTreeToggle<CR>
