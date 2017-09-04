@@ -5,6 +5,15 @@ filetype on
 set relativenumber
 set number
 
+filetype plugin indent on      	" required 
+nmap <F6> :NERDTreeToggle<CR>
+set nowrap
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -40,12 +49,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 
 call vundle#end()  		" required
-filetype plugin indent on      	" required 
-nmap <F6> :NERDTreeToggle<CR>
-
-:let g:html_indent_script1 = "inc"
-:let g:html_indent_style1 = "inc"
-:let g:html_indent_inctags = "html,body,head,tbody"
 
 
 "emmet trigger
@@ -53,9 +56,9 @@ let g:user_emmet_leader_key='<C-Z>'
 
 "solarized options
 if &t_Co > 1
-	syntax enable
-	set background=dark
-	colorscheme solarized
+    syntax enable
+    set background=dark
+    colorscheme solarized
 endif
 
 
