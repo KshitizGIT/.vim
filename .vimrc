@@ -48,6 +48,9 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tpope/vim-surround'
 
+"matchit.vim
+Plugin 'geoffharcourt/vim-matchit'
+
 call vundle#end()  		" required
 
 
