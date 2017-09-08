@@ -6,7 +6,12 @@ set relativenumber
 set number
 
 filetype plugin indent on      	" required 
+" map <F6> to toggle NERDTree
 nmap <F6> :NERDTreeToggle<CR>
+
+" map CTRL+J to add new line in normal mode
+nnoremap <NL> A <CR><ESC>
+
 set nowrap
 set expandtab
 set tabstop=4
