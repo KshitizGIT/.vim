@@ -65,7 +65,7 @@ let g:user_emmet_leader_key='<C-Z>'
 "solarized options
 if &t_Co > 1
     syntax enable
-    set background=dark
+    set background=light
     colorscheme solarized
 endif
 
