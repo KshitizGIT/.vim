@@ -25,7 +25,7 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
+" let Vundle manage Vundle, required`
 Plugin 'VundleVim/Vundle.vim'
 
 " added nerdtree
@@ -53,6 +53,9 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tpope/vim-surround'
 
+"added vim-repeat
+Plugin 'tpope/vim-repeat'  
+
 "matchit.vim
 Plugin 'geoffharcourt/vim-matchit'
 
@@ -73,3 +76,9 @@ endif
 " airline-themes
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
+
+"auto-indent on save. Refer: https://coderwall.com/p/phy6cg/vim-auto-indent-on-save
+augroup autoindent
+    au!
+    autocmd BufWritePre * :normal migg=G`i
+augroup End
