@@ -62,6 +62,10 @@ Plugin 'geoffharcourt/vim-matchit'
 call vundle#end()  		" required
 
 
+" jk as escape
+:imap jk <Esc>
+:cmap jk <Esc>
+
 "emmet trigger
 let g:user_emmet_leader_key='<C-Z>'
 
