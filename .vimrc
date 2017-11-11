@@ -1,4 +1,5 @@
 set nocompatible
+set encoding=utf-8
 
 filetype on
 
@@ -73,7 +74,7 @@ let g:user_emmet_leader_key='<C-Z>'
 if &t_Co > 1
     syntax enable
     set background=dark
-    colorscheme solarized
+    "    colorscheme solarized
 endif
 
 
