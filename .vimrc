@@ -86,3 +86,6 @@ augroup autoindent
     au!
     autocmd BufWritePre * :normal migg=G`i
 augroup End
+
+"copy to clipboard macro
+let @c='gg"+yG'''''
