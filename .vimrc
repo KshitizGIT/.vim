@@ -39,7 +39,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'altercation/vim-colors-solarized'
 
 " added YouCompleteMe
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " added ctrlp.vim
 Plugin 'ctrlpvim/ctrlp.vim'
