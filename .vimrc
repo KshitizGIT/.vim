@@ -76,13 +76,26 @@ if &t_Co > 1
     colorscheme solarized
 endif
 
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " airline-themes
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
 "auto-indent on save. Refer: https://coderwall.com/p/phy6cg/vim-auto-indent-on-save
-augroup autoindent
-    au!
-    autocmd BufWritePre * :normal migg=G`i
-augroup End
+"augroup autoindent
+"    au!
+"    autocmd BufWritePre * :normal migg=G`i
+"augroup End
+
+"copy to clipboard macro
+let @c='gg"+yG'''''
