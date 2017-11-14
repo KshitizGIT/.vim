@@ -59,6 +59,9 @@ Plugin 'tpope/vim-repeat'
 "matchit.vim
 Plugin 'geoffharcourt/vim-matchit'
 
+"added fugitive 
+Plugin 'tpope/vim-fugitive'
+
 call vundle#end()  		" required
 
 
@@ -83,9 +86,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 " airline-themes
 let g:airline_theme='solarized'
@@ -98,4 +101,4 @@ let g:airline_solarized_bg='dark'
 "augroup End
 
 "copy to clipboard macro
-let @c='gg"+yG'''''
+let @c='"+y'
