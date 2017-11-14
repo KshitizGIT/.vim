@@ -101,4 +101,4 @@ let g:airline_solarized_bg='dark'
 "augroup End
 
 "copy to clipboard macro
-let @c='gg"+yG'''''
+let @c='"+y'
