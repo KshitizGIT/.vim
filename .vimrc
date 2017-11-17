@@ -60,7 +60,13 @@ Plugin 'tpope/vim-repeat'
 Plugin 'geoffharcourt/vim-matchit'
 
 "added fugitive 
-Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'  
+
+"added ultiships
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
 
 call vundle#end()  		" required
 
@@ -79,11 +85,6 @@ if &t_Co > 1
     colorscheme solarized
 endif
 
-" Track the engine.
-Plugin 'SirVer/ultisnips'
-
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<C-j>"
