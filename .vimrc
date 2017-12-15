@@ -1,5 +1,6 @@
 set nocompatible
 
+syntax enable
 filetype on
 
 set relativenumber
@@ -78,12 +79,6 @@ call vundle#end()  		" required
 "emmet trigger
 let g:user_emmet_leader_key='<C-Z>'
 
-"solarized options
-if &t_Co > 1
-    syntax enable
-    set background=dark
-    colorscheme solarized
-endif
 
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
@@ -91,9 +86,6 @@ let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
-" airline-themes
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
 
 "auto-indent on save. Refer: https://coderwall.com/p/phy6cg/vim-auto-indent-on-save
 "augroup autoindent
