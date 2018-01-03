@@ -69,6 +69,9 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
+" added python-mode
+Plugin 'python-mode/python-mode'
+
 call vundle#end()  		" required
 
 
