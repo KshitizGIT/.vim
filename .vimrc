@@ -98,3 +98,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 "copy to clipboard macro
 let @c='"+y'
+
+" remove autocomplete from python-mode
+
+let g:pymode_rope_complete_on_dot = 0
