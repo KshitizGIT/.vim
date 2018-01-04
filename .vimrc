@@ -13,11 +13,11 @@ nmap <F6> :NERDTreeToggle<CR>
 " map CTRL+J to add new line in normal mode
 nnoremap <NL> A <CR><ESC>
 
-set nowrap
 set expandtab
-set tabstop=4
-set softtabstop=4
+set nowrap
 set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 
 
 " set the runtime path to include Vundle and initialize
@@ -79,6 +79,36 @@ call vundle#end()  		" required
 :imap jk <Esc>
 :cmap jk <Esc>
 
+" Automatic reloading of .vimrc files
+autocmd! bufwritepost .vimrc source % 
+
+" Better copy and paste
+set pastetoggle=<F2>
+set clipboard=unnamedplus 
+
+" Rebind <leader> key 
+let mapleader = ","
+
+" Quicksave command 
+noremap <C-Z> :update<CR>
+vnoremap <C-Z> <C-C>:update<CR>
+inoremap <C-Z> <C-O>:update<CR> 
+
+" Quick quit command
+noremap <Leader>e :quit<CR> " Quit current window
+noremap <Leader>E :qa!<CR>  " Quit all window
+
+" easier moving between tabs  
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
+
+"map sort function to a key  
+vnoremap <Leader>s :sort<CR> 
+
+"easier moving of code blocks
+vnoremap < <gv " better indentation
+vnoremap > >gv " better indentation 
+
 "emmet trigger
 let g:user_emmet_leader_key='<C-Z>'
 
@@ -87,7 +117,6 @@ if &t_Co > 1
     set background=dark
     colorscheme solarized
 endif
-
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<C-j>"
@@ -107,4 +136,6 @@ let @c='"+y'
 " remove autocomplete from python-mode
 
 let g:pymode_rope_complete_on_dot = 0
+
+" use python3 default syntax checking
 let g:pymode_python = 'python3'
