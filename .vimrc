@@ -85,7 +85,7 @@ autocmd! bufwritepost .vimrc source %
 
 " Better copy and paste
 set pastetoggle=<F2>
-set clipboard=unnamedplus 
+set clipboard=unnamed
 
 " Rebind <leader> key 
 let mapleader = ","
