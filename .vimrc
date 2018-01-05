@@ -129,9 +129,5 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 "copy to clipboard macro
 let @c='"+y'
 
-" remove autocomplete from python-mode
-
-let g:pymode_rope_complete_on_dot = 0
-
-" use python3 default syntax checking
-let g:pymode_python = 'python3'
+"YouCompleteMe settings
+let g:ycm_python_binary_path='python'
