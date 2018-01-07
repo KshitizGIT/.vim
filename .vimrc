@@ -11,7 +11,7 @@ filetype plugin indent on      	" required
 nmap <F6> :NERDTreeToggle<CR>
 
 " map CTRL+J to add new line in normal mode
-nnoremap <NL> A <CR><ESC>
+nnoremap <NL> A<CR><ESC>
 
 set expandtab
 set nowrap
