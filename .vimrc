@@ -69,8 +69,8 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
-" added python-mode
-Plugin 'python-mode/python-mode'
+" added python-mode 
+"Plugin 'python-mode/python-mode' 
 
 call vundle#end()  		" required
 
@@ -129,7 +129,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 let @c='"+y'
 
 " remove autocomplete from python-mode
-let g:pymode_rope_complete_on_dot = 0
+"let g:pymode_rope_complete_on_dot = 0
 
 
 "YouComplete me settings
