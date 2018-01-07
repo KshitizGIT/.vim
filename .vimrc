@@ -70,6 +70,9 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
+" syntastic.vim
+Plugin 'vim-syntastic/syntastic'
+
 " added python-mode
 "Plugin 'python-mode/python-mode'
 
@@ -93,7 +96,7 @@ let mapleader = ","
 " Quicksave command 
 noremap <C-Z> :update<CR>
 vnoremap <C-Z> <C-C>:update<CR>
-inoremap <C-Z> <C-O>:update<CR> 
+inoremap <C-Z> <C-O>:update<CR>
 
 " Quick quit command
 noremap <Leader>e :quit<CR> " Quit current window
@@ -131,3 +134,13 @@ let @c='"+y'
 
 "YouCompleteMe settings
 let g:ycm_python_binary_path='python'
+
+"Syntastic Recommended Settings
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
