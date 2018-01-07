@@ -71,7 +71,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " added python-mode
-Plugin 'python-mode/python-mode'
+"Plugin 'python-mode/python-mode'
 
 call vundle#end()  		" required
 
