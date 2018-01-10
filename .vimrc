@@ -134,6 +134,7 @@ let @c='"+y'
 
 "YouCompleteMe settings
 let g:ycm_python_binary_path='python'
+nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
 "Syntastic Recommended Settings
 "set statusline+=%#warningmsg#
