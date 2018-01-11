@@ -130,7 +130,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 "augroup End
 
 "copy to clipboard macro
-let @c='"+y'
+let @c='ggVGy'''''
 
 "YouCompleteMe settings
 let g:ycm_python_binary_path='python'
