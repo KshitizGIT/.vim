@@ -10,8 +10,11 @@ filetype plugin indent on      	" required
 " map <F6> to toggle NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 
-" map CTRL+J to add new line in normal mode
-nnoremap <NL> A<CR><ESC>
+"Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 set expandtab
 set nowrap
