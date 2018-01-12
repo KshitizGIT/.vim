@@ -73,9 +73,6 @@ Plugin 'vim-syntastic/syntastic'
 " vim-tmux-navigator
 Plugin 'christoomey/vim-tmux-navigator'
 
-" typesciprt syntax
-Plugin 'leafgarland/typescript-vim'
-
 call vundle#end() " required
 
 
@@ -126,13 +123,6 @@ endif
 let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
-
-
-"auto-indent on save. Refer: https://coderwall.com/p/phy6cg/vim-auto-indent-on-save
-"augroup autoindent
-"    au!
-"    autocmd BufWritePre * :normal migg=G`i
-"augroup End
 
 "copy to clipboard macro
 let @c='ggVGy'''''
