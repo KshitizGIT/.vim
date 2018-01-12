@@ -12,10 +12,10 @@ filetype plugin indent on      	" required
 nmap <F6> :NERDTreeToggle<CR>
 
 "Easier split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
 
 set expandtab
 set nowrap
@@ -75,6 +75,9 @@ Plugin 'honza/vim-snippets'
 
 " syntastic.vim
 Plugin 'vim-syntastic/syntastic'
+
+" vim-tmux-navigator
+Plugin 'christoomey/vim-tmux-navigator'
 
 " added python-mode 
 "Plugin 'python-mode/python-mode'
