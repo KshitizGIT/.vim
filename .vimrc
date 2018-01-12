@@ -137,7 +137,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 "augroup End
 
 "copy to clipboard macro
-let @c='"+y'
+let @c='ggVGy'''''
 
 " remove autocomplete from python-mode
 "let g:pymode_rope_complete_on_dot = 0
@@ -147,9 +147,9 @@ let g:ycm_python_binary_path='python'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
 "Syntastic Recommended Settings
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
