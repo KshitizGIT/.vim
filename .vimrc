@@ -11,12 +11,6 @@ filetype plugin indent on      	" required
 " map <F6> to toggle NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 
-"Easier split navigation
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
-
 set expandtab
 set nowrap
 set shiftwidth=4
@@ -79,10 +73,10 @@ Plugin 'vim-syntastic/syntastic'
 " vim-tmux-navigator
 Plugin 'christoomey/vim-tmux-navigator'
 
-" added python-mode 
-"Plugin 'python-mode/python-mode'
+" typesciprt syntax
+Plugin 'leafgarland/typescript-vim'
 
-call vundle#end()  		" required
+call vundle#end() " required
 
 
 " jk as escape
@@ -137,9 +131,6 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 "copy to clipboard macro
 let @c='ggVGy'''''
-
-" remove autocomplete from python-mode
-"let g:pymode_rope_complete_on_dot = 0
 
 "YouComplete me settings
 let g:ycm_python_binary_path='python'
