@@ -10,8 +10,11 @@ filetype plugin indent on      	" required
 " map <F6> to toggle NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 
-" map CTRL+J to add new line in normal mode
-nnoremap <NL> A<CR><ESC>
+"Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 set expandtab
 set nowrap
@@ -134,16 +137,14 @@ let @c='ggVGy'''''
 " remove autocomplete from python-mode
 "let g:pymode_rope_complete_on_dot = 0
 
-
 "YouComplete me settings
-
 let g:ycm_python_binary_path='python'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
 "Syntastic Recommended Settings
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
