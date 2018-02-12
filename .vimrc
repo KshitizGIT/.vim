@@ -1,12 +1,9 @@
 set nocompatible
 
-syntax enable
-filetype on
 
 set relativenumber
 set number
 
-filetype plugin indent on      	" required 
 " map <F6> to toggle NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 
@@ -72,9 +69,13 @@ Plugin 'vim-syntastic/syntastic'
 " vim-tmux-navigator
 Plugin 'christoomey/vim-tmux-navigator'
 
+" csv.vim
+Plugin 'chrisbra/csv.vim'
 call vundle#end() " required
 
-
+filetype off
+syntax enable
+filetype plugin indent on      	" required 
 " jk as escape
 :imap jk <Esc>
 :cmap jk <Esc>
