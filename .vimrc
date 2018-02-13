@@ -1,13 +1,8 @@
 set nocompatible
 set encoding=utf-8
-
-syntax enable
-filetype on
-
 set relativenumber
 set number
 
-filetype plugin indent on      	" required 
 " map <F6> to toggle NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 
@@ -42,6 +37,9 @@ Plugin 'Valloric/YouCompleteMe'
 " added ctrlp.vim
 Plugin 'ctrlpvim/ctrlp.vim'
 
+" added ack.vim
+Plugin 'mileszs/ack.vim'
+
 " added vim-airline
 Plugin 'vim-airline/vim-airline'
 
@@ -73,9 +71,13 @@ Plugin 'vim-syntastic/syntastic'
 " vim-tmux-navigator
 Plugin 'christoomey/vim-tmux-navigator'
 
+" csv.vim
+"Plugin 'chrisbra/csv.vim'
 call vundle#end() " required
 
-
+filetype off
+filetype plugin indent on      	" required 
+syntax enable
 " jk as escape
 :imap jk <Esc>
 :cmap jk <Esc>
@@ -130,6 +132,11 @@ nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+"if silver search if available
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
