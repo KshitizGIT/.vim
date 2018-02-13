@@ -76,6 +76,7 @@ call vundle#end() " required
 filetype off
 syntax enable
 filetype plugin indent on      	" required 
+
 " jk as escape
 :imap jk <Esc>
 :cmap jk <Esc>
@@ -89,6 +90,13 @@ set clipboard=unnamedplus
 
 " Rebind <leader> key 
 let mapleader = ","
+
+" solarized options
+if &t_Co > 1
+    set background=dark
+    colorscheme solarized
+    let g:airline_theme='solarized'
+endif
 
 " Quicksave command 
 noremap <C-Z> :update<CR>
