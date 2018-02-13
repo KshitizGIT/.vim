@@ -70,7 +70,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'christoomey/vim-tmux-navigator'
 
 " csv.vim
-Plugin 'chrisbra/csv.vim'
+"Plugin 'chrisbra/csv.vim'
 call vundle#end() " required
 
 filetype off
