@@ -107,6 +107,8 @@ map <Leader>m <esc>:tabnext<CR>
 "map sort function to a key  
 vnoremap <Leader>s :sort<CR> 
 
+"map leader a to find under cursor
+noremap <Leader>a :Ack -w <cword><CR>
 "easier moving of code blocks
 vnoremap < <gv " better indentation
 vnoremap > >gv " better indentation 
