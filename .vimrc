@@ -1,6 +1,4 @@
 set nocompatible
-
-
 set relativenumber
 set number
 
@@ -8,11 +6,9 @@ set number
 nmap <F6> :NERDTreeToggle<CR>
 
 set expandtab
-set nowrap
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -77,7 +73,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end() " required
 
 filetype off
-filetype plugin indent on      	" required 
+filetype plugin indent on	" required 
 syntax enable
 " jk as escape
 :imap jk <Esc>
@@ -93,6 +89,14 @@ set clipboard=unnamedplus
 " Rebind <leader> key 
 let mapleader = ","
 
+" easy open .vimrc
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
+" show invisibles toggle
+nmap <leader>l :set list!<CR>
+
+"Use the symbols as TextMate for tabstops and EOLS
+set listchars=tab:▸\ ,eol:¬
 " solarized options
 if &t_Co > 1
     set background=dark
