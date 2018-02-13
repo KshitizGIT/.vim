@@ -1,6 +1,4 @@
 set nocompatible
-
-
 set relativenumber
 set number
 
@@ -92,13 +90,6 @@ set clipboard=unnamedplus
 
 " Rebind <leader> key 
 let mapleader = ","
-
-" solarized options
-if &t_Co > 1
-    set background=dark
-    colorscheme solarized
-    let g:airline_theme='solarized'
-endif
 
 " Quicksave command 
 noremap <C-Z> :update<CR>
