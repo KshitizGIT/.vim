@@ -16,7 +16,7 @@
         (New-Object Net.WebClient).DownloadFile(
           $uri,
           $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
-            "~\vimfiles\autoload\plug.vim"
+            "~\.vim\autoload\plug.vim"
           )
         )`
         
