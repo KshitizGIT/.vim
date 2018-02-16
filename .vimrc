@@ -10,67 +10,58 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required`
-Plugin 'VundleVim/Vundle.vim'
-
+call plug#begin('~/.vim/plugged')
 " added nerdtree
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' }
 
 " added emmet-vim
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 
 " added solarized
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
 " added YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 " added ctrlp.vim
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " added ack.vim
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " added vim-airline
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 " added vim-airline-themes
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 
 "added vim-surround
 
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 "added vim-repeat
-Plugin 'tpope/vim-repeat'  
+Plug 'tpope/vim-repeat'  
 
 "matchit.vim
-Plugin 'geoffharcourt/vim-matchit'
+Plug 'geoffharcourt/vim-matchit'
 
 "added fugitive 
-Plugin 'tpope/vim-fugitive'  
+Plug 'tpope/vim-fugitive'  
 
 "added ultiships
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 " syntastic.vim
-Plugin 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic'
 
 " vim-tmux-navigator
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
-" csv.vim
-"Plugin 'chrisbra/csv.vim'
-call vundle#end() " required
+call plug#end()
 
 filetype off
 filetype plugin indent on	" required 
@@ -97,6 +88,17 @@ nmap <leader>l :set list!<CR>
 
 "Use the symbols as TextMate for tabstops and EOLS
 set listchars=tab:▸\ ,eol:¬
+
+" Quicksave command 
+noremap <C-Z> :update<CR>
+vnoremap <C-Z> <C-C>:update<CR>
+inoremap <C-Z> <C-O>:update<CR>
+
+" Quick quit command
+noremap <Leader>e :quit<CR> " Quit current window
+noremap <Leader>E :qa!<CR>  " Quit all window
+
+" easier moving between tabs  
 
 " Quicksave command 
 noremap <C-Z> :update<CR>
