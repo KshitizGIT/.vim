@@ -5,6 +5,7 @@ set number
 " map <F6> to toggle NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 
+set nowrap
 set expandtab
 set shiftwidth=4
 set softtabstop=4
@@ -19,7 +20,7 @@ Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' }
 Plug 'mattn/emmet-vim'
 
 " added solarized
-Plug 'altercation/vim-colors-solarized'
+Plug 'rafi/awesome-vim-colorschemes'
 
 " added YouCompleteMe
 Plug 'Valloric/YouCompleteMe'
@@ -152,3 +153,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" default color scheme
+colorscheme OceanicNext
