@@ -6,62 +6,61 @@ set number
 " map <F6> to toggle NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 
+set nowrap
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
+set hlsearch
 
 
 call plug#begin('~/.vim/plugged')
+" large file plugin
+Plug 'vim-scripts/LargeFile'
 " added nerdtree
 Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' }
-
-" added emmet-vim
-Plug 'mattn/emmet-vim'
-
 " added solarized
-Plug 'altercation/vim-colors-solarized'
-
-" added YouCompleteMe
-Plug 'Valloric/YouCompleteMe'
-
+Plug 'rafi/awesome-vim-colorschemes' 
 " added ctrlp.vim
-Plug 'ctrlpvim/ctrlp.vim'
-
+Plug 'ctrlpvim/ctrlp.vim' 
 " added ack.vim
-Plug 'mileszs/ack.vim'
-
+Plug 'mileszs/ack.vim' 
 " added vim-airline
-Plug 'vim-airline/vim-airline'
-
+Plug 'vim-airline/vim-airline' 
 " added vim-airline-themes
 Plug 'vim-airline/vim-airline-themes'
-
-"added vim-surround
-
-Plug 'tpope/vim-surround'
-
+"added vim-surround 
+Plug 'tpope/vim-surround' 
 "added vim-repeat
 Plug 'tpope/vim-repeat'  
-
 "matchit.vim
-Plug 'geoffharcourt/vim-matchit'
-
+Plug 'geoffharcourt/vim-matchit' 
 "added fugitive 
-Plug 'tpope/vim-fugitive'  
-
+Plug 'tpope/vim-fugitive', { 'on': 'Gstatus' }
 "added ultiships
-Plug 'SirVer/ultisnips'
-
+Plug 'SirVer/ultisnips' 
 " Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
-
-" syntastic.vim
-Plug 'vim-syntastic/syntastic'
-
+Plug 'honza/vim-snippets' 
 " vim-tmux-navigator
-Plug 'christoomey/vim-tmux-navigator'
-
+Plug 'christoomey/vim-tmux-navigator' 
+"vim-instant-markdown
+Plug 'suan/vim-instant-markdown' , {'for': 'markdown'}
+" typescript syntax highlighting
+Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript'}
+"neovim specific installation
+if has('nvim')
+    "deoplete
+    Plug 'Shougo/deoplete.nvim'
+    "neomake
+    Plug 'neomake/neomake'
+    "deoplete typescript port
+    Plug 'mhartington/nvim-typescript', {'for': 'typescript' }
+else
+    " added YouCompleteMe
+    Plug 'Valloric/YouCompleteMe'
+    " syntastic.vim
+    Plug 'vim-syntastic/syntastic' 
+endif
 call plug#end()
 
 filetype off
@@ -72,7 +71,7 @@ syntax enable
 :cmap jk <Esc>
 
 " Automatic reloading of .vimrc files
-autocmd! bufwritepost .vimrc source % 
+autocmd! BufwritePost .vimrc,init.vim source % 
 
 " Better copy and paste
 set pastetoggle=<F2>
@@ -139,17 +138,15 @@ let @c='ggVGy'''''
 let g:ycm_python_binary_path='python'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
-"Syntastic Recommended Settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 "if silver search if available
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"vim markdown preview settings
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_slow = 1
+"large file 100MB
+let g:LargeFile = 100
+" default color scheme
+colorscheme OceanicNext
