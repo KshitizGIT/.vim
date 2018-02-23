@@ -14,6 +14,8 @@ set hlsearch
 
 
 call plug#begin('~/.vim/plugged')
+" large file plugin
+Plug 'vim-scripts/LargeFile'
 " added nerdtree
 Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' }
 " added solarized
@@ -143,5 +145,7 @@ endif
 "vim markdown preview settings
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_slow = 1
+"large file 100MB
+let g:LargeFile = 100
 " default color scheme
 colorscheme OceanicNext
