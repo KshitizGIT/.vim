@@ -35,7 +35,7 @@ Plug 'tpope/vim-repeat'
 "matchit.vim
 Plug 'geoffharcourt/vim-matchit' 
 "added fugitive 
-Plug 'tpope/vim-fugitive', { 'on': 'Gstatus' }
+Plug 'tpope/vim-fugitive'
 "added ultiships
 Plug 'SirVer/ultisnips' 
 " Snippets are separated from the engine. Add this if you want them:
