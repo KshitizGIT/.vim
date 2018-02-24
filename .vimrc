@@ -49,7 +49,7 @@ Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript'}
 "neovim specific installation
 if has('nvim')
     "deoplete
-    Plug 'Shougo/deoplete.nvim'
+    Plug 'Shougo/deoplete.nvim' , { 'do': ':UpdateRemotePlugins' }
     "neomake
     Plug 'neomake/neomake'
     "deoplete typescript port
@@ -133,6 +133,10 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 "copy to clipboard macro
 let @c='ggVGy'''''
 
+"deoplete settings
+let g:deoplete#enable_at_startup = 1
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 "YouComplete me settings
 let g:ycm_python_binary_path='python'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
