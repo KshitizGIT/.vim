@@ -137,6 +137,13 @@ let @c='ggVGy'''''
 let g:deoplete#enable_at_startup = 1
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"neomake settings
+if has('nvim')
+    call neomake#configure#automake('rw', 1000)
+else
+    let g:syntastic_markdown_mdl_exec = 'markdownlint'
+    let g:syntastic_markdown_mdl_args = ''
+endif
 "YouComplete me settings
 let g:ycm_python_binary_path='python'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
@@ -153,3 +160,5 @@ let g:instant_markdown_slow = 1
 let g:LargeFile = 100
 " default color scheme
 colorscheme OceanicNext
+"include custom commands
+source ~/.vim/commands.vim
