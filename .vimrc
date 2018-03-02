@@ -133,13 +133,12 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 "copy to clipboard macro
 let @c='ggVGy'''''
-
-"deoplete settings
-let g:deoplete#enable_at_startup = 1
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-"neomake settings
 if has('nvim')
+    "deoplete settings
+    let g:deoplete#enable_at_startup = 1
+    " <TAB>: completion.
+    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+    "neomake settings
     call neomake#configure#automake('rw', 1000)
 else
     let g:syntastic_markdown_mdl_exec = 'markdownlint'
