@@ -42,6 +42,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets' 
 " vim-tmux-navigator
 Plug 'christoomey/vim-tmux-navigator' 
+" chrisbra/csv.vim
+Plug 'chrisbra/csv.vim', {'on' : 'CSVInit'}
 "vim-instant-markdown
 Plug 'suan/vim-instant-markdown' , {'for': 'markdown'}
 " typescript syntax highlighting
