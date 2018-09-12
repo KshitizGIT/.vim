@@ -46,6 +46,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'chrisbra/csv.vim', {'on' : 'CSVInit'}
 "vim-instant-markdown
 Plug 'suan/vim-instant-markdown' , {'for': 'markdown'}
+"jedi vim
+Plug 'davidhalter/jedi-vim'
 " typescript syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript'}
 "neovim specific installation
@@ -56,6 +58,8 @@ if has('nvim')
     Plug 'neomake/neomake'
     "deoplete typescript port
     Plug 'mhartington/nvim-typescript', {'for': 'typescript' }
+    " deoplete jedi
+    Plug 'zchee/deoplete-jedi'
 else
     " added YouCompleteMe
     Plug 'Valloric/YouCompleteMe'
@@ -111,7 +115,7 @@ noremap <Leader>e :quit<CR> " Quit current window
 noremap <Leader>E :qa!<CR>  " Quit all window
 
 " easier moving between tabs  
-map <Leader>n <esc>:tabprevious<CR>
+map <Leader>p <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
 "map sort function to a key  
@@ -137,6 +141,9 @@ let @c='ggVGy'''''
 if has('nvim')
     "deoplete settings
     let g:deoplete#enable_at_startup = 1
+    let g:deoplete#sources#jedi#show_docstring = 1
+    "disable jedi vims autocompletion. Use deoplete-jedi autocomplete
+    let g:jedi#completions_enabled = 0
     " <TAB>: completion.
     inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
     "neomake settings
