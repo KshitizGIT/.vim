@@ -2,8 +2,8 @@ set nocompatible
 set relativenumber
 set number
 
-" map <F6> to toggle NERDTree
-nmap <F6> :NERDTreeToggle<CR>
+" map <F6> to toggle netrw
+nmap <F6> :Vexplore<CR>
 
 set nowrap
 set expandtab
