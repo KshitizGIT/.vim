@@ -3,8 +3,8 @@ set encoding=utf-8
 set relativenumber
 set number
 
-" map <F6> to toggle NERDTree
-nmap <F6> :NERDTreeToggle<CR>
+" map <F6> to toggle netrw
+nmap <F6> :Vexplore<CR>
 
 set nowrap
 set expandtab
@@ -17,8 +17,6 @@ set hlsearch
 call plug#begin('~/.vim/plugged')
 " large file plugin
 Plug 'vim-scripts/LargeFile'
-" added nerdtree
-Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' }
 " added solarized
 Plug 'rafi/awesome-vim-colorschemes' 
 " added ctrlp.vim
@@ -47,16 +45,27 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'chrisbra/csv.vim', {'on' : 'CSVInit'}
 "vim-instant-markdown
 Plug 'suan/vim-instant-markdown' , {'for': 'markdown'}
+"jedi vim
+Plug 'davidhalter/jedi-vim'
 " typescript syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript'}
 "neovim specific installation
-if has('nvim')
+"
+if v:version>= 800 || has('nvim')
     "deoplete
-    Plug 'Shougo/deoplete.nvim' , { 'do': ':UpdateRemotePlugins' }
+    if has('nvim')
+        Plug 'Shougo/deoplete.nvim' , { 'do': ':UpdateRemotePlugins' }
+    else
+        Plug 'Shougo/deoplete.nvim'
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
+    endif
     "neomake
-    Plug 'neomake/neomake'
+     Plug 'neomake/neomake'
     "deoplete typescript port
     Plug 'mhartington/nvim-typescript', {'for': 'typescript' }
+    " deoplete jedi
+    Plug 'zchee/deoplete-jedi'
 else
     " added YouCompleteMe
     Plug 'Valloric/YouCompleteMe'
@@ -112,7 +121,7 @@ noremap <Leader>e :quit<CR> " Quit current window
 noremap <Leader>E :qa!<CR>  " Quit all window
 
 " easier moving between tabs  
-map <Leader>n <esc>:tabprevious<CR>
+map <Leader>p <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
 "map sort function to a key  
@@ -135,9 +144,12 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 "copy to clipboard macro
 let @c='ggVGy'''''
-if has('nvim')
+if v:version >=800 || has('nvim')
     "deoplete settings
     let g:deoplete#enable_at_startup = 1
+    let g:deoplete#sources#jedi#show_docstring = 1
+    "disable jedi vims autocompletion. Use deoplete-jedi autocomplete
+    let g:jedi#completions_enabled = 0
     " <TAB>: completion.
     inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
     "neomake settings
@@ -146,8 +158,6 @@ else
     let g:syntastic_markdown_mdl_exec = 'markdownlint'
     let g:syntastic_markdown_mdl_args = ''
 endif
-"YouComplete me settings
-let g:ycm_python_binary_path='python'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
 "if silver search if available
