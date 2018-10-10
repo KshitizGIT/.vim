@@ -49,11 +49,18 @@ Plug 'davidhalter/jedi-vim'
 " typescript syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript'}
 "neovim specific installation
-if has('nvim')
+"
+if v:version>= 800 || has('nvim')
     "deoplete
-    Plug 'Shougo/deoplete.nvim' , { 'do': ':UpdateRemotePlugins' }
+    if has('nvim')
+        Plug 'Shougo/deoplete.nvim' , { 'do': ':UpdateRemotePlugins' }
+    else
+        Plug 'Shougo/deoplete.nvim'
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
+    endif
     "neomake
-    Plug 'neomake/neomake'
+     Plug 'neomake/neomake'
     "deoplete typescript port
     Plug 'mhartington/nvim-typescript', {'for': 'typescript' }
     " deoplete jedi
@@ -78,7 +85,7 @@ autocmd! BufwritePost .vimrc,init.vim source %
 
 " Better copy and paste
 set pastetoggle=<F2>
-set clipboard=unnamedplus 
+set clipboard=unnamedplus
 
 " Rebind <leader> key 
 let mapleader = ","
@@ -136,7 +143,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 "copy to clipboard macro
 let @c='ggVGy'''''
-if has('nvim')
+if v:version >=800 || has('nvim')
     "deoplete settings
     let g:deoplete#enable_at_startup = 1
     let g:deoplete#sources#jedi#show_docstring = 1
@@ -150,8 +157,6 @@ else
     let g:syntastic_markdown_mdl_exec = 'markdownlint'
     let g:syntastic_markdown_mdl_args = ''
 endif
-"YouComplete me settings
-let g:ycm_python_binary_path='python'
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
 "if silver search if available
