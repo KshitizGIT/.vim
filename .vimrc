@@ -16,8 +16,6 @@ set hlsearch
 call plug#begin('~/.vim/plugged')
 " large file plugin
 Plug 'vim-scripts/LargeFile'
-" added nerdtree
-Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' }
 " added solarized
 Plug 'rafi/awesome-vim-colorschemes' 
 " added ctrlp.vim
