@@ -109,17 +109,6 @@ noremap <Leader>e :quit<CR> " Quit current window
 noremap <Leader>E :qa!<CR>  " Quit all window
 
 " easier moving between tabs  
-
-" Quicksave command 
-noremap <C-Z> :update<CR>
-vnoremap <C-Z> <C-C>:update<CR>
-inoremap <C-Z> <C-O>:update<CR>
-
-" Quick quit command
-noremap <Leader>e :quit<CR> " Quit current window
-noremap <Leader>E :qa!<CR>  " Quit all window
-
-" easier moving between tabs  
 map <Leader>p <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
