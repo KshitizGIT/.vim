@@ -120,7 +120,8 @@ noremap <Leader>a :Ack -w <cword><CR>
 "easier moving of code blocks
 vnoremap < <gv " better indentation
 vnoremap > >gv " better indentation 
-
+"map ctrl-, to search ctrl p search only current directory
+noremap <C-t> :CtrlPCurWD<CR>
 "emmet trigger
 let g:user_emmet_leader_key='<C-Z>'
 
@@ -158,6 +159,8 @@ let g:instant_markdown_autostart = 0
 let g:instant_markdown_slow = 1
 "large file 100MB
 let g:LargeFile = 100
+let g:netrw_preview = 1
+
 " default color scheme
 colorscheme OceanicNext
 "include custom commands
