@@ -48,6 +48,10 @@ Plug 'suan/vim-instant-markdown' , {'for': 'markdown'}
 Plug 'davidhalter/jedi-vim'
 " typescript syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript'}
+" vim-jsx-pretty jsx syntax highlighting
+Plug 'maxmellon/vim-jsx-pretty'
+" vim javascript autocomplet
+Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
 "neovim specific installation
 "
 if v:version>= 800 || has('nvim')
