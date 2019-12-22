@@ -113,17 +113,6 @@ noremap <Leader>e :quit<CR> " Quit current window
 noremap <Leader>E :qa!<CR>  " Quit all window
 
 " easier moving between tabs  
-
-" Quicksave command 
-noremap <C-Z> :update<CR>
-vnoremap <C-Z> <C-C>:update<CR>
-inoremap <C-Z> <C-O>:update<CR>
-
-" Quick quit command
-noremap <Leader>e :quit<CR> " Quit current window
-noremap <Leader>E :qa!<CR>  " Quit all window
-
-" easier moving between tabs  
 map <Leader>p <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
@@ -135,7 +124,8 @@ noremap <Leader>a :Ack -w <cword><CR>
 "easier moving of code blocks
 vnoremap < <gv " better indentation
 vnoremap > >gv " better indentation 
-
+"map ctrl-, to search ctrl p search only current directory
+noremap <C-t> :CtrlPCurWD<CR>
 "emmet trigger
 let g:user_emmet_leader_key='<C-Z>'
 
@@ -173,6 +163,8 @@ let g:instant_markdown_autostart = 0
 let g:instant_markdown_slow = 1
 "large file 100MB
 let g:LargeFile = 100
+let g:netrw_preview = 1
+
 " default color scheme
 colorscheme OceanicNext
 "include custom commands
