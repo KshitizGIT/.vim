@@ -164,6 +164,8 @@ let g:instant_markdown_slow = 1
 "large file 100MB
 let g:LargeFile = 100
 let g:netrw_preview = 1
+let g:netrw_winsize = 25
+let g:netrw_liststyle = 3
 
 " default color scheme
 colorscheme OceanicNext
