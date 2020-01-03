@@ -49,6 +49,10 @@ Plug 'suan/vim-instant-markdown' , {'for': 'markdown'}
 Plug 'davidhalter/jedi-vim'
 " typescript syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript'}
+" vim-jsx-pretty jsx syntax highlighting
+Plug 'maxmellon/vim-jsx-pretty'
+" vim javascript autocomplet
+Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
 "neovim specific installation
 "
 if v:version>= 800 || has('nvim')
@@ -161,6 +165,8 @@ let g:instant_markdown_slow = 1
 "large file 100MB
 let g:LargeFile = 100
 let g:netrw_preview = 1
+let g:netrw_winsize = 25
+let g:netrw_liststyle = 3
 
 " default color scheme
 colorscheme OceanicNext
