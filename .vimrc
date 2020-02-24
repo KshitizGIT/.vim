@@ -3,7 +3,7 @@ set relativenumber
 set number
 
 " map <F6> to toggle netrw
-nmap <F6> :Vexplore<CR>
+nmap <F1> :Vexplore<CR>
 
 set nowrap
 set expandtab
@@ -18,8 +18,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/LargeFile'
 " added solarized
 Plug 'rafi/awesome-vim-colorschemes' 
-" added ctrlp.vim
-Plug 'ctrlpvim/ctrlp.vim' 
 " added ack.vim
 Plug 'mileszs/ack.vim' 
 " added vim-airline
@@ -54,6 +52,8 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
 "neovim specific installation
 "
+Plug 'vim-vdebug/vdebug'
+
 if v:version>= 800 || has('nvim')
     "deoplete
     if has('nvim')
@@ -75,8 +75,10 @@ else
     " syntastic.vim
     Plug 'vim-syntastic/syntastic' 
 endif
+" added fzf.vim
+Plug 'junegunn/fzf', {'do': './install --bin'}
+Plug 'junegunn/fzf.vim'
 call plug#end()
-
 filetype off
 filetype plugin indent on	" required 
 syntax enable
@@ -125,7 +127,8 @@ noremap <Leader>a :Ack -w <cword><CR>
 vnoremap < <gv " better indentation
 vnoremap > >gv " better indentation 
 "map ctrl-, to search ctrl p search only current directory
-noremap <C-t> :CtrlPCurWD<CR>
+noremap <C-p> :Files<CR>
+noremap <C-g> :Rg<CR>
 "emmet trigger
 let g:user_emmet_leader_key='<C-Z>'
 
@@ -154,7 +157,9 @@ endif
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 
 "if silver search if available
-if executable('ag')
+if executable('rg')   
+    let g:ackprg = 'rg --vimgrep --no-heading'
+elseif executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 
