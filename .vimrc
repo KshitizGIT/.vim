@@ -284,6 +284,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 "end coc settings
 
 " default color scheme
-colorscheme OceanicNext
+colorscheme papercolor
 "include custom commands
 source ~/.vim/commands.vim
