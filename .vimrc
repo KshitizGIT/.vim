@@ -39,8 +39,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator' 
 " chrisbra/csv.vim
 Plug 'chrisbra/csv.vim', {'on' : 'CSVInit'}
-"vim-instant-markdown
-Plug 'suan/vim-instant-markdown' , {'for': 'markdown'}
+" iamcco/markdown-preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " typescript syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript'}
 " vim-jsx-pretty jsx syntax highlighting
@@ -127,9 +127,6 @@ elseif executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 
-"vim markdown preview settings
-let g:instant_markdown_autostart = 0
-let g:instant_markdown_slow = 1
 "large file 100MB
 let g:LargeFile = 100
 
