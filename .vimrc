@@ -102,13 +102,13 @@ map <Leader>m <esc>:tabnext<CR>
 vnoremap <Leader>s :sort<CR> 
 
 "map leader a to find under cursor
-noremap <Leader>a :Ack -w <cword><CR>
+noremap <Leader>A :Ack -w <cword><CR>
 "easier moving of code blocks
 vnoremap < <gv " better indentation
 vnoremap > >gv " better indentation 
 "map ctrl-, to search ctrl p search only current directory
 noremap <C-p> :Files<CR>
-noremap <C-g> :Rg<CR>
+noremap <C-f> :Rg<CR>
 
 "copy to clipboard macro
 let @c='ggVGy'''''
@@ -120,9 +120,10 @@ else
     let g:syntastic_markdown_mdl_args = ''
 endif
 
-"if silver search if available
+"if ripgrep search if available
 if executable('rg')   
     let g:ackprg = 'rg --vimgrep --no-heading'
+"if silver search if available
 elseif executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
